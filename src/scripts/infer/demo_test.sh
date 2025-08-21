@@ -1,0 +1,23 @@
+python demo.py ctdet \
+        --dataset table \
+        --demo /ssdata/user/zxy/data/test_table_unline \
+        --demo_name demo_test \
+        --debug 1 \
+        --dataset_name PTN \
+        --arch dla_34  \
+        --K 3000 \
+        --MK 5000 \
+        --tsfm_layers 3\
+        --stacking_layers 3 \
+        --gpus 0\
+        --wiz_2dpe \
+        --wiz_detect \
+        --wiz_stacking \
+        --convert_onnx 0 \
+        --vis_thresh_corner 0.5 \
+        --vis_thresh 0.5 \
+        --scores_thresh 0.5 \
+        --nms \
+        --demo_dir ../dir_of_visualization_ptn/ \
+        --load_model /ssdata/user/zxy/LORE-TSR/exp/ctdet/train_wireless/model_last.pth \
+        --load_processor /ssdata/user/zxy/LORE-TSR/exp/ctdet/train_wireless/processor_last.pth

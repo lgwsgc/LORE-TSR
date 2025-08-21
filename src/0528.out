@@ -1,0 +1,32 @@
+Using tensorboardX
+Fix size testing.
+training chunk_sizes: [12, 2, 2]
+The output will be saved to  /ssdata/user/zxy/LORE-TSR/src/lib/../../exp/ctdet/train_wireless
+heads {'hm': 2, 'st': 8, 'wh': 8, 'ax': 256, 'cr': 256, 'reg': 2}
+****identify network
+****load backbone
+loaded /ssdata/user/zxy/LORE-TSR/exp_tableocr3.1/ctdet/train_wireless/model_last.pth, epoch 49
+loaded /ssdata/user/zxy/LORE-TSR/exp_tableocr3.1/ctdet/train_wireless/processor_last.pth, epoch 49
+/ssdata/user/zxy/LORE-TSR/src/lib/../../data/PTN
+/ssdata/user/zxy/data/PTN/json/test.json
+==> initializing table val data.
+loading annotations into memory...
+Done (t=1.88s)
+creating index...
+index created!
+Loaded val 714 samples
+/ssdata/user/zxy/LORE-TSR/src/lib/../../data/PTN
+/ssdata/user/zxy/data/PTN/json/train.json
+==> initializing table train data.
+loading annotations into memory...
+Done (t=10.61s)
+creating index...
+index created!
+Loaded train 3573 samples
+Starting training...
+/ssdata/user/zxy/LORE-TSR/src/lib/models/utils.py:70: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  ys = (ind // width).unsqueeze(2).int().float()
+/home/train/miniconda3/envs/torch110-cu113/lib/python3.7/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Drop LR to 1e-05
+Drop LR to 1.0000000000000002e-06

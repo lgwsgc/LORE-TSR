@@ -1,0 +1,12 @@
+Fix size testing.
+training chunk_sizes: [32]
+The output will be saved to  /ssdata/user/zxy/code/lore/LORE-TSR/src/../../exp/ctdet/default
+heads {'hm': 2, 'st': 8, 'wh': 8, 'ax': 256, 'cr': 256, 'reg': 2}
+****identify network
+****load backbone
+loaded ../model/ckpt_wtw/model_best.pth, epoch 100
+loaded ../model/ckpt_wtw/processor_best.pth, epoch 100
+/ssdata/miniconda3/envs/torch110-cu113/lib/python3.7/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py:353: UserWarning: Deprecation warning. This ORT build has ['CUDAExecutionProvider', 'CPUExecutionProvider'] enabled. The next release (ORT 1.10) will require explicitly setting the providers parameter (as opposed to the current behavior of providers getting set/registered by default based on the build flags) when instantiating InferenceSession.For example, onnxruntime.InferenceSession(..., providers=["CUDAExecutionProvider"], ...)
+  "based on the build flags) when instantiating InferenceSession."
+/ssdata/user/zxy/code/lore/LORE-TSR/src/lib/models/decode.py:46: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  topk_clses = (topk_ind // K).int()

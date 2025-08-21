@@ -1,0 +1,22 @@
+python main.py ctdet \
+	--dataset table \
+	--exp_id train_wireless \
+	--dataset_name PTN \
+	--image_dir /ssdata/user/gangwei.li/Code/LORE-TSR/data/elect-table-331/images \
+	--wiz_2dpe \
+	--wiz_stacking \
+	--tsfm_layers 3 \
+	--stacking_layers 3\
+	--batch_size 16 \
+	--master_batch 12 \
+	--arch dla_34 \
+	--lr 1e-4 \
+	--K 3000 \
+	--MK 5000 \
+	--num_epochs 800 \
+	--lr_step '100, 160' \
+	--gpus 0,1,2\
+	--num_workers 16 \
+	--val_intervals 10  \
+	--load_model /ssdata/user/gangwei.li/Code/LORE-TSR1/model/wireless_model/model_last.pth \
+	--load_processor /ssdata/user/gangwei.li/Code/LORE-TSR1/model/wireless_model/processor_last.pth

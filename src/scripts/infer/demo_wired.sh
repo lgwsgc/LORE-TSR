@@ -1,0 +1,23 @@
+python demo.py ctdet \
+        --dataset table \
+        --demo /ssdata/user/zxy/code/lore/LORE-TSR/src/data/test\
+        --demo_name demo_wired \
+        --debug 1 \
+        --arch dla_34 \
+        --K 3000 \
+        --MK 5000 \
+        --tsfm_layers 4 \
+        --stacking_layers 4 \
+        --gpus 0\
+        --wiz_4ps \
+        --wiz_detect \
+        --wiz_rev \
+        --wiz_stacking \
+        --convert_onnx 0 \
+        --vis_thresh_corner 0.3 \
+        --vis_thresh 0.20 \
+        --scores_thresh 0.2 \
+        --nms \
+        --demo_dir ../111 \
+        --load_model /ssdata/user/zxy/code/LORE-TSR/model/ckpt_wtw/model_best.pth \
+        --load_processor ../model/ckpt_wtw/processor_best.pth
